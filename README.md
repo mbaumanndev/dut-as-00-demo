@@ -11,7 +11,7 @@ Créez-vous un compte sur [GitHub][1] puis demandez un accès à [GitHub Educati
 
 Maintenant que vous avez un comtpe GitHub, créez un fork de ce dépôt, puis clônez votre fork localement.
 
-Editez le fichier `index.html` et ajoutez-y le code suivant en remplaçant les valeurs entre `<!-- -->`.
+Editez le fichier `index.html` et ajoutez-y le code suivant après `<!-- Ajouter après -->` en remplaçant les valeurs entre `<!-- -->`.
 
 ```html
 <div class="col">
