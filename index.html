@@ -1,27 +1,28 @@
-<!DOCTYPE html>
-<html lang="fr">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Accueil - Mon site d'actu</title>
+<!DOCTYPE html><!-- En premier, toujours le doctype -->
+<html lang="fr"><!-- Element racine de notre document, précisant la langue -->
+<head><!-- Métadonnées du document -->
+    <meta charset="UTF-8" /><!-- Encodage du document -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Accueil - Mon site d'actu</title><!-- Titre affiché dans les onglets -->
 </head>
-<body>
-    <header>
-        <h1>Mon site d'actu</h1>
-        <nav>
+<body><!-- C'est ici qu'on va mettre tout le contenu du document -->
+    <header><!-- Indique, dans le cas rpésent, l'en-tête du document -->
+        <h1>Mon site d'actu</h1><!-- Titre principal du document -->
+        <nav><!-- Indique une navigation -->
             <a href="index.html" title="Accueil">Accueil</a>
             <a href="contact.html" title="Me contacter">Me contacter</a>
             <a href="exemple/mapage.html" title="Ma page">Ma page</a>
             <a href="https://www.google.fr/" title="Google">Google</a>
         </nav>
     </header>
-    <main>
-        <article>
-            <header>
-                <h1>Mon titre d'article</h1>
+    <main><!-- Contenu principal du document -->
+        <article><!-- Indique un contenu pouvant être pris pour docupment à poart entière -->
+            <header><!-- En-tête du contenu -->
+                <h1>Mon titre d'article</h1><!-- Titre principal du contenu -->
                 Publié le 23/09/2020 par Maxime Baumann
             </header>
             <p><em>Mon super paragraphe d'accroche...</em></p>
+            <!-- <img/> doit toujours préciser un attribut alt pour l'accessibilité -->
             <img src="https://via.placeholder.com/468x100?text=Ma+bannière+de+présentation"
                  alt="Mon texte alternatif"
                  width="468"
@@ -41,6 +42,13 @@
                         <li>Second niveau 2</li>
                     </ol>
                 </li>
+                <li>
+                    <ul>
+                        <li>Premier item de list</li>
+                        <li>Second item de liste</li>
+                        <li>...</li>
+                    </ul>
+                </li>
             </ol>
             <blockquote cite="https://masupersource.fr/la-citation.html">
                 <p>Ma super citation avec <strong>un élément important</strong>...</p>
@@ -50,17 +58,23 @@
             <footer>...</footer>
         </article>
     </main>
-    <aside>
+    <aside><!-- Indique un contenu qui n'a pas de rapport avec le contenu principal de la page -->
         <form method="POST">
-            <fieldset>
+            <fieldset><!-- Fliedset indique un groupe de champs de formulaire -->
                 <legend>Abonnez-vous à notre newsletter</legend>
+                <!-- L'attribut for du label doit toujours être égal à l'attribut id du champ de formulaire correspondant -->
                 <label for="nom">Nom</label>
                 <input name="nom" id="nom" type="text" />
+                <label for="prenom">Prénom</label>
+                <input name="prenom" id="prenom" type="text" value="Henri" />
                 <label for="email">Email</label>
+                <!-- Certains champs en HTML5 disposent de règles de validation inclues. -->
+                <!-- Il ne faut cependant par négliger la validation des formulaires côté serveur. -->
                 <input name="email" id="email" type="email" required placeholder="nom@email.fr" />
                 <input type="submit" value="Envoyer" />
             </fieldset>
         </form>
+        <!-- On peut activer la vérification orthographique sur un formulaire -->
         <form spellcheck="true">
             <h2>Ecrivez-nous !</h2>
             <label for="raison">Raison du contact</label>
@@ -105,10 +119,52 @@
               <label for="horns">Horns</label>
             </div>
             <label for="ecrit">Composez votre message</label>
-            <textarea name="ecrit" id="ecrit" spellcheck="false" placeholder="Votre text ici..."></textarea>
+            <textarea name="ecrit" id="ecrit" spellcheck="false" placeholder="Votre texte ici..."></textarea>
+            <textarea name="ecrit2" id="ecrit2" spellcheck="true" placeholder="Votre texte ici...">Une valeur par défo avec des fautes</textarea>
         </form>
+        <table border="1">
+            <!-- Optionnel -->
+            <thead>
+                <tr><!-- Symbolise une ligne -->
+                    <th>Id</th><!-- Symbolise une cellule-->
+                    <th>Nom</th>
+                    <th>Prénom</th>
+                </tr>
+            </thead>
+            <!-- Optionnel -->
+            <tbody>
+                <tr>
+                    <td>1</td>
+                    <td>Maxime</td>
+                    <td>BAUMANN</td>
+                </tr>
+                <tr>
+                    <td>2</td>
+                    <!-- La cellule suivante en fera deux de large -->
+                    <td colspan="2">Nicolas Delpech</td>
+                </tr>
+                <tr>
+                    <td>3</td>
+                    <!-- La cellule suivante prend deux lignes de haut -->
+                    <td rowspan="2">Alexandre</td>
+                    <td>Carpentier</td>
+                </tr>
+                <tr>
+                    <td>4</td>
+                    <td>Triboulet</td>
+                </tr>
+            </tbody>
+            <!-- Optionnel -->
+            <tfoot>
+                <tr>
+                    <th>Id</th>
+                    <th>Nom</th>
+                    <th>Prénom</th>
+                </tr>
+            </tfoot>
+        </table>
     </aside>
-    <footer>
+    <footer><!-- Indique un pied de page -->
         &copy; Maxime Baumann - 2020
     </footer>
 </body>

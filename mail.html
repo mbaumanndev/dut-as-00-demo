@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contactez-nous</title>
+</head>
+<body>
+    <main>
+        <h1>Contactez-nous !</h1>
+        <!-- On aura tendance à utiliser un serveur pour envoyer des mails, mais ça reste valable -->
+        <form action="mailto:contact@test.fr">
+            <fieldset>
+                <legend>Contactez-nous</legend>
+                <div>
+                    <label for="subject">Sujet</label>
+                    <select name="subject" id="subject">
+                        <option value="Demande de devis">Faire un devis</option>
+                        <option value="Postuler à une offre">Postuler à une offre</option>
+                    </select>
+                </div>
+                <div>
+                    <label for="cc">Email</label>
+                    <input type="email" name="cc" id="cc" required />
+                </div>
+                <div>
+                    <label for="body">Message</label>
+                    <textarea 
+                              cols="80"
+                              id="body"
+                              name="body"
+                              rows="10"
+                              placeholder="Votre message ici..."
+                              required
+                              spellcheck="true"></textarea>
+                </div>
+                <div>
+                    <input type="submit" name="submit" value="Envoyer" />
+                    <button type="reset">Annuler</button>
+                </div>
+            </fieldset>
+        </form>
+    </main>
+</body>
+</html>
