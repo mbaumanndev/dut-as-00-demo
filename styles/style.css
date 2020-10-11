@@ -1,0 +1,29 @@
+/* pas "main" directement mais un classe, comme ça on peut avoir différents rendus pour la balise main */
+.main {
+    /* Notre classe peut-être mise sur n'importe quelle balise,
+    même une qui n'est pas un bloc, on force donc ce comportement */
+    display: block;
+    width: 760px; /* On définit une largeur fixe à notre block */
+    /* Avec les marges automatiques, si la zone d'affichage est plus large que notre bloc, il sera centré verticalement */
+    margin: auto;
+}
+
+/* Nous permet de définir des "affichages différents" */
+/*
+.main-left {
+    display: block;
+    width: 760px;
+}
+*/
+
+/* Titre 20px en bleu*/
+.titre {
+    font-size: 20px;
+    color: blue;
+}
+
+fieldset {
+    border: none;
+    margin: 0; /* Pas de marges externes */
+    padding: 0; /* Pas marges internes */
+}

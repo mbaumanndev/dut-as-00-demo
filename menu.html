@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menu</title>
+</head>
+<body>
+    <header>
+        <h1>Bienvenue</h1>
+        <nav>
+            <ol>
+                <li><a href="entrees.html">Entrées</a></li>
+                <li><a href="plats.html">Plats à la carte</a></li>
+                <li><a href="boissons.html">Boissons</a></li>
+                <li><a href="desserts.html">Desserts</a></li>
+                <li><button type="button">Payer</button></li>
+            </ol>
+        </nav>
+    </header>
+    <aside>
+        <h2>Contact du restau</h2>
+        <p class="h-card">
+            <span class="p-name">Mon super restaurant</span><br/>
+            <span class="p-adr">26 Rue du Labrador</span><br/>
+            <span class="p-tel">06.66.00.00.22</span>
+        </p>
+    </aside>
+    <main>
+        <h1>Menu</h1>
+        <ul>
+            <li class="h-product">
+                <div>
+                    <span class="p-name">Pizza Hawaienne</span> (<span class="p-price">8€</span>)
+                    <img src="https://via.placeholder.com/150"
+                         width="150" height="150"
+                         class="u-photo"
+                         alt="Suggestion de présentation: Pizza Hawaienne"/>
+                    <label for="PIZHA_IN">Nombre de produit</label>
+                    <input type="number" min="1" max="10"
+                           step="1" data-product-code="PIZHA"
+                           id="PIZHA_IN" />
+                    <!-- Ou inclusivement (pour mobile par ex)
+                    <label for="PIZHA_SE"></label>
+                    <select data-product-code="PIZHA" id="PIZHA_SE">
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
+                        <option value="6">6</option>
+                        <option value="7">7</option>
+                        <option value="8">8</option>
+                        <option value="9">9</option>
+                        <option value="10">10</option>
+                    </select>
+                    -->
+                    <button type="button">Ajouter</button>
+                </div>
+            </li>
+            <li class="h-product">
+                <div>
+                    Pâtes au thon (7€)
+                    <img src="https://via.placeholder.com/150"
+                         width="150" height="150"
+                         alt="Suggestion de présentation: Pâtes au thon"/>
+                    <label for="PATTH_IN">Nombre de produit</label>
+                    <input type="number" min="1" max="10"
+                           step="1" data-product-code="PATTH"
+                           id="PATTH_IN" />
+                    <!-- Ou inclusivement (pour mobile par ex)
+                    <label for="PATTH_SE"></label>
+                    <select data-product-code="PATTH" id="PATTH_IN">
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
+                        <option value="6">6</option>
+                        <option value="7">7</option>
+                        <option value="8">8</option>
+                        <option value="9">9</option>
+                        <option value="10">10</option>
+                    </select>
+                    -->
+                    <button type="button">Ajouter</button>
+                </div>
+            </li>
+        </ul>
+    </main>
+    <footer>
+        <section>
+            <h2>Horraires</h2>
+            <ul>
+                <li>Lun-Ven: 12h-14 et 18h-22h</li>
+                <li>Sam: 12h-15h et 18h-23h</li>
+                <li>Dim: Fermé le midi, 18h-21h</li>
+            </ul>
+        </section>
+        <section>
+            <nav>
+                <a href="contact.html">Nous contacter</a>
+            </nav>
+        </section>
+    </footer>
+</body>
+</html>
