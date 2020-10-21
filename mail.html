@@ -5,7 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Contactez-nous</title>
 
-    <link rel="stylesheet" type="text/css" href="./styles/style.css" />
+    <!--<link rel="stylesheet" type="text/css" href="./styles/style.css" />-->
+    <link rel="stylesheet" type="text/css" href="./styles/style-flex.css" />
 </head>
 <body>
     <!-- On va utiliser une classe pour styliser le contenu -->
@@ -13,21 +14,21 @@
         <h1 class="titre">Contactez-nous !</h1>
         <!-- On aura tendance à utiliser un serveur pour envoyer des mails, mais ça reste valable -->
         <form action="mailto:contact@test.fr">
-            <fieldset>
+            <fieldset class="flex-container">
                 <legend>Contactez-nous</legend>
-                <div>
-                    <label for="subject">Sujet</label>
-                    <select name="subject" id="subject">
+                <div class="field-group">
+                    <label for="subject" class="label">Sujet</label>
+                    <select name="subject" id="subject" class="field">
                         <option value="Demande de devis">Faire un devis</option>
                         <option value="Postuler à une offre">Postuler à une offre</option>
                     </select>
                 </div>
-                <div>
-                    <label for="cc">Email</label>
-                    <input type="email" name="cc" id="cc" required />
+                <div class="field-group">
+                    <label for="cc" class="label">Email</label>
+                    <input type="email" name="cc" id="cc" required class="field" />
                 </div>
-                <div>
-                    <label for="body">Message</label>
+                <div class="field-group field-group--full">
+                    <label for="body" class="label">Message</label>
                     <textarea 
                               cols="80"
                               id="body"
@@ -35,11 +36,12 @@
                               rows="10"
                               placeholder="Votre message ici..."
                               required
-                              spellcheck="true"></textarea>
+                              spellcheck="true"
+                              class="field"></textarea>
                 </div>
                 <div>
-                    <input type="submit" name="submit" value="Envoyer" />
-                    <button type="reset">Annuler</button>
+                    <input class="btn" type="submit" name="submit" value="Envoyer" />
+                    <button class="btn" type="reset">Annuler</button>
                 </div>
             </fieldset>
         </form>
