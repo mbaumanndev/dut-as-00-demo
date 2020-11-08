@@ -13,7 +13,7 @@
     <main class="main">
         <h1 class="titre">Contactez-nous !</h1>
         <!-- On aura tendance à utiliser un serveur pour envoyer des mails, mais ça reste valable -->
-        <form action="mailto:contact@test.fr">
+        <form id="form" action="mailto:contact@test.fr">
             <fieldset class="flex-container">
                 <legend>Contactez-nous</legend>
                 <div class="field-group">
@@ -25,17 +25,16 @@
                 </div>
                 <div class="field-group">
                     <label for="cc" class="label">Email</label>
-                    <input type="email" name="cc" id="cc" required class="field" />
+                    <input type="email" name="cc" id="cc" class="field" />
                 </div>
                 <div class="field-group field-group--full">
-                    <label for="body" class="label">Message</label>
+                    <label for="body" class="label">Message (<span id="count">10</span> restant)</label>
                     <textarea 
                               cols="80"
                               id="body"
                               name="body"
                               rows="10"
                               placeholder="Votre message ici..."
-                              required
                               spellcheck="true"
                               class="field"></textarea>
                 </div>
@@ -46,5 +45,7 @@
             </fieldset>
         </form>
     </main>
+
+    <script type="text/javascript" src="javascript/mail.js"></script>
 </body>
 </html>
