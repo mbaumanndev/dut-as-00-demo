@@ -1,0 +1,51 @@
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+
+html,
+body {
+    margin: 0;
+    padding: 0;
+    position: relative;
+}
+
+body.modal-open {
+    overflow: hidden;
+}
+
+.content {
+    display: block;
+    height: 1000vh;
+
+    background: rgb(2,0,36);
+    background: linear-gradient(180deg, rgba(2,0,36,1) 0%, rgba(9,9,121,1) 35%, rgba(0,212,255,1) 100%); 
+}
+
+.modal-overlay {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+.modal {
+    display: block;
+    position: fixed;
+
+    top: 25%;
+    left: 50%;
+
+    transform: translate3d(-50%, 0, 0);
+
+    max-width: 600px;
+
+    padding: 20px;
+
+    background-color: white;
+
+}
+
+
