@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Donnez !</title>
+    <link rel="stylesheet" type="text/css" href="./styles/TP1.css" />
+</head>
+<body class="container">
+    <header class="header">
+        <img class="header__logo" src="https://via.placeholder.com/150x50" width="150" height="50" alt="Logo de la foundation" />
+        <nav class="header__nav">
+            <ul class="nav__container">
+                <li class="nav__item"><a nohref>Fundraising</a></li>
+                <li class="nav__item">
+                    <a nohref>About</a>
+                    <ul class="nav__container">
+                        <li class="nav__item">The Foundation</li>
+                        <li class="nav__item">The Team</li>
+                    </ul>
+                </li>
+                <li class="nav__item"><a nohref>Donate</a></li>
+            </ul>
+        </nav>
+    </header>
+    <picture class="responsive">
+        <source srcset="https://picsum.photos/seed/balkany/768/432" media="(max-width: 768px)" />
+        <source srcset="https://picsum.photos/seed/balkany/1600/500" media="(min-width: 768px)" />
+        <img src="https://picsum.photos/seed/balkany/1600/500" alt="Banner Levalois" />
+    </picture>
+    <main>
+        <section class="section1">
+            <img src="https://via.placeholder.com/400x400" alt="ALT Text" />
+            <article>
+                <h1>Titre 1</h1>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut maximus enim quis felis rutrum, a ultricies libero accumsan. Nunc quis dui varius, luctus lorem eget, molestie mi. Suspendisse eget vulputate ante. Vestibulum vel semper augue. Donec a posuere mi. Aliquam posuere maximus sollicitudin. Sed risus purus, dignissim a risus eu, accumsan elementum arcu. Aenean sagittis egestas magna, non faucibus ipsum fermentum et. Vestibulum pellentesque elementum lorem, in maximus sapien tincidunt ut. Phasellus vestibulum quis felis rutrum dapibus. Nulla facilisi.</p>
+            </article>
+        </section>
+        <section class="section2">
+            <img src="https://via.placeholder.com/1200x400" alt="ALT Text" />
+            <article>
+                <h2>Titre</h2>
+                <p>Duis magna massa, euismod vel fermentum a, venenatis et ligula. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Fusce massa sapien, venenatis ac facilisis sed, lacinia sit amet lectus. Morbi in nisl ante. Vivamus id nibh sit amet felis lobortis aliquet. Duis lorem libero, fringilla eget feugiat eu, mollis at nulla. Sed molestie risus neque, ut blandit magna porttitor quis. Praesent quis placerat massa.</p>
+            </article>
+            <div class="donate-button">
+                <input class="field" type="number" min="1" />
+                <button class="button" type="button">Donate</button>
+            </div>
+        </section>
+    </main>
+    <footer class="footer">
+        <div class="footer__mark">
+            &copy; Copyright 2020
+        </div>
+        <nav class="footer__links">
+            <ul class="nav__container">
+                <li class="nav__item"><a nohref>Mentions légales</a></li>
+                <li class="nav__item"><a nohref>Politique de confidentialité</a></li>
+                <li class="nav__item"><a nohref>Cookies</a></li>
+            </ul>
+        </nav>
+    </footer>
+</body>
+</html>

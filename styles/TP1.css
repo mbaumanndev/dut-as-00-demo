@@ -1,0 +1,140 @@
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+}
+
+.header__logo {
+    display: block;
+    margin: auto;
+}
+.header__nav > .nav__container,
+.footer__links > .nav__container {
+    display: flex;
+    padding: 0;
+    list-style-type: none;
+    justify-content: space-around;
+}
+.nav__container .nav__item {
+    position: relative;
+    display: inline;
+}
+.nav__item > .nav__container {
+    display: none;
+}
+.nav__item:hover > .nav__container {
+    display: block;
+    padding: 0;
+    list-style-type: none;
+    position: absolute;
+    min-width: 200px;
+    background-color: white;
+}
+.nav__item .nav__item {
+    display: block;
+}
+picture.responsive > img {
+    max-width: 100%;
+}
+.section1 {
+    display: flex;
+    flex-direction: column-reverse;
+}
+.section1 img {
+    max-width: 100%;
+}
+.section2 {
+    display: flex;
+    flex-direction: column;
+}
+.section2 img {
+    max-width: 100%;
+    order: 1;
+}
+.donate-button .field,
+.donate-button .button {
+    display: block;
+    width: 100%;
+    height: 30px;
+}
+.footer {
+    display: flex;
+    flex-direction: column-reverse;
+}
+
+@media only screen and (min-width: 1024px) {
+    .header {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    .header__logo {
+        display: inline-block;
+        margin: 10px 0 10px 10px;
+    }
+
+    .header__nav > .nav__container {
+        margin-right: 10px;
+    }
+
+    .nav__item {
+        padding: 10px 20px
+    }
+
+    picture.responsive > img {
+        width: 100%;
+    }
+
+    .section1 {
+        flex-direction: row;
+    }
+    .section1 img {
+        max-width: 100%;
+    }
+    .section1 article {
+        padding: 20px;
+    }
+
+    .section2 {
+        display: block;
+        position: relative;
+    }
+    .section2 img {
+        width: 100%;
+    }
+
+    .section2 article {
+        position: absolute;
+        top: 50px;
+        left: 50px;
+        bottom: 50px;
+        right: calc(50% + 150px);
+        background-color: rgba(255, 255, 255, 0.4);
+        padding: 20px;
+    }
+    .section2 .donate-button {
+        position: absolute;
+        width: 240px;
+        bottom: 100px;
+        right: 120px;
+    }
+
+    .donate-button .field {
+        height: 60px;
+    }
+    .donate-button .button {
+        height: 100px;
+    }
+    .footer {
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+    }
+    .footer__mark {
+        padding-left: 40px;
+    }
+}
