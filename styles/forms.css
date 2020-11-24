@@ -1,0 +1,15 @@
+#step2 {
+    display: none;
+}
+
+.hint {
+    display: none;
+}
+
+.no-js #step2 {
+    display: block;
+}
+
+.no-js .hint {
+    display: block;
+}
