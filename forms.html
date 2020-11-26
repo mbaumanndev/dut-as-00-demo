@@ -7,40 +7,43 @@
     <link rel="stylesheet" href="./styles/forms.css" type="text/css" />
 </head>
 <body>
-    <form action="" method="POST" enctype="multipart/form-data">
-        <fieldset id="step1">
+    <form id="register" action="" method="POST" enctype="multipart/form-data">
+        <fieldset id="step1" class="grid-container">
             <legend>Champs obligatoires</legend>
+            <h2>Champs obligatoires</h2>
             <div class="field">
                 <label for="name">Nom</label>
-                <input type="text" name="name" id="name" required data-minlength="2" />
+                <input type="text" name="name" id="name" required data-minlength="2" tabindex="1" autofocus />
                 <span class="hint" data-hint="minlength">Votre nom doit faire au minimum deux caractères</span>
             </div>
             <div class="field">
                 <label for="firstname">Prénom</label>
-                <input type="text" name="firstname" id="firstname" required data-minlength="2" />
+                <input type="text" name="firstname" id="firstname" required data-minlength="2" tabindex="2" />
                 <span class="hint" data-hint="minlength">Votre nom doit faire au minimum deux caractères</span>
             </div>
             <div class="field">
                 <label for="birthday">Date de naissance</label>
-                <input type="date" name="birthday" id="birthday" required data-maxyear="2007" />
+                <input type="date" name="birthday" id="birthday" required data-maxyear="2007" tabindex="3" />
+                <span class="hint" data-hint="maxyear">L'année maximale doit être 2007</span>
             </div>
             <div class="field">
                 <label for="email">Email</label>
-                <input type="email" name="email" id="email" required />
+                <input type="email" name="email" id="email" required tabindex="4" />
             </div>
             <div class="field">
                 <label for="password">Mot de passe</label>
-                <input type="password" name="password" id="password" required data-minlength="8" />
-                <span class="hint" data-hint="minlength">Votre nom doit deux caractères</span>
+                <input type="password" name="password" id="password" required data-minlength="8" tabindex="5" />
+                <span class="hint" data-hint="minlength">Votre mot de passe doit faire au minimum huit caractères</span>
             </div>
             <div class="field">
                 <label for="confirm">Confirmer pass</label>
-                <input type="password" name="confirm" id="confirm" required data-equalsto="password" />
+                <input type="password" name="confirm" id="confirm" required data-minlength="8" data-equalsto="password" tabindex="6" />
                 <span class="hint" data-hint="minlength">Votre mot de passe doit faire au minimum huit caractères</span>
+                <span class="hint" data-hint="equalsto">Les mots de passe sont différents</span>
             </div>
-            <div class="buttons">
-                <button type="button" id="next">Etape suivante</button>
-                <button type="button" id="abort">Annuler</button>
+            <div class="buttons no-js-hidden">
+                <button type="button" id="next"  tabindex="7">Etape suivante</button>
+                <button type="button" id="abort" tabindex="8">Annuler</button>
             </div>
         </fieldset>
         <fieldset id="step2">
@@ -76,13 +79,13 @@
             </div>
             <div class="buttons">
                 <button type="submit" id="submit">Envoyer</button>
-                <button type="button" id="abortpart2">Annuler</button>
+                <button type="reset" class="no-js-visible">Annuler</button>
+                <button type="button" id="abortpart2" class="no-js-hidden">Annuler</button>
                 <button type="button" id="prev">Etape précédente</button>
             </div>
         </fieldset>
     </form>
 
-    <script type="text/javascript" src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.5.1.js"></script>
     <script type="text/javascript" src="javascript/forms.jquery.js"></script>
 </body>
 </html>
