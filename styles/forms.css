@@ -1,3 +1,4 @@
+/* Par défaut, on cache l'étape numéro 2 et les hints */
 #step2 {
     display: none;
 }
@@ -10,6 +11,9 @@
     display: none;
 }
 
+/* Si la classe no-js est présente dans le document,
+   c'est que le JS n'est pas activé, on doit afficher l'étape 2,
+   sinon on ne pourra pas la saisir */
 .no-js #step2 {
     display: block;
 }
@@ -26,6 +30,12 @@
     display: initial;
 }
 
+/*
+    On définit une grille de troie colones de largeur automatique,
+    avec autant de lignes que nécessaires de hauteur minimale de 50px,
+    et maximale du plus haut contenu présent sur la ligne.
+    Les cases de la grilles sont espacées de 20px.
+*/
 .grid-container {
     display: grid;
     grid-template-columns: auto auto auto;
@@ -39,6 +49,7 @@
 .grid-container legend {
     display: none;
 }
+/* Le h2 va de la bordure 1 (bord gauche de la colone 1) à la bordure 4 (bord droit de la colone 3) */
 .grid-container h2 {
     grid-column: 1 / 4;
 }
@@ -51,6 +62,8 @@
 .grid-container .field > input {
     display: block;
 }
+/* La zone comportant les boutons est affichée en ligne de droite à gauche
+   avec un espacement égal entre chaque élément présent à l'intérieur */
 .grid-container .buttons {
     grid-column: 1 / 4;
     display: flex;
