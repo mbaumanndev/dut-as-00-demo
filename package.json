@@ -1,7 +1,7 @@
 {
   "name": "dut-as-00-demo",
   "version": "1.0.0",
-  "description": "Démo VS Code et Git",
+  "description": "Démo VS Code et Git ===================",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -17,6 +17,10 @@
     "url": "https://github.com/mbaumanndev/dut-as-00-demo/issues"
   },
   "homepage": "https://github.com/mbaumanndev/dut-as-00-demo#readme",
+  "devDependencies": {
+    "parcel-bundler": "^1.12.4",
+    "sass": "^1.29.0"
+  },
   "dependencies": {
     "jquery": "^3.5.1"
   }
